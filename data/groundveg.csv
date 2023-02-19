@@ -1,0 +1,101 @@
+﻿Plot,Site,Treatment,Block,Quadrat,percent_cover,ht_cm
+27 acres ex,27Acres,E,B,1,80,15
+27 acres ex,27Acres,E,B,2,70,14
+27 acres ex,27Acres,E,B,3,65,48
+27 acres ex,27Acres,E,B,4,40,116
+27 acres ex,27Acres,E,B,5,40,130
+27 acres op,27Acres,C,B,1,90,15
+27 acres op,27Acres,C,B,2,60,6
+27 acres op,27Acres,C,B,3,60,5
+27 acres op,27Acres,C,B,4,95,10
+27 acres op,27Acres,C,B,5,95,12
+Brook 5 ex,Brook5,E,D,1,70,91
+Brook 5 ex,Brook5,E,D,2,65,62
+Brook 5 ex,Brook5,E,D,3,55,105
+Brook 5 ex,Brook5,E,D,4,75,35
+Brook 5 ex,Brook5,E,D,5,85,39
+Brook 5 op,Brook5,C,D,1,100,9
+Brook 5 op,Brook5,C,D,2,100,5
+Brook 5 op,Brook5,C,D,3,90,7
+Brook 5 op,Brook5,C,D,4,100,8
+Brook 5 op,Brook5,C,D,5,100,8
+Brook 6 ex,Brook6,E,D,1,80,71
+Brook 6 ex,Brook6,E,D,2,85,82
+Brook 6 ex,Brook6,E,D,3,95,40
+Brook 6 ex,Brook6,E,D,4,85,27
+Brook 6 ex,Brook6,E,D,5,95,32
+Brook 6 op,Brook6,C,D,1,100,6
+Brook 6 op,Brook6,C,D,2,100,8
+Brook 6 op,Brook6,C,D,3,100,10
+Brook 6 op,Brook6,C,D,4,100,11
+Brook 6 op,Brook6,C,D,5,100,25
+Brook build ex,Brookbuild,E,D,1,90,83
+Brook build ex,Brookbuild,E,D,2,95,62
+Brook build ex,Brookbuild,E,D,3,85,51
+Brook build ex,Brookbuild,E,D,4,65,53
+Brook build ex,Brookbuild,E,D,5,90,71
+Brook build op,Brookbuild,C,D,1,90,4
+Brook build op,Brookbuild,C,D,2,90,3
+Brook build op,Brookbuild,C,D,3,90,4
+Brook build op,Brookbuild,C,D,4,95,5
+Brook build op,Brookbuild,C,D,5,85,5
+Broomers ex,Broomers,E,A,1,50,63
+Broomers ex,Broomers,E,A,2,60,55
+Broomers ex,Broomers,E,A,3,65,67
+Broomers ex,Broomers,E,A,4,20,21
+Broomers ex,Broomers,E,A,5,10,5
+Broomers op,Broomers,C,A,1,95,24
+Broomers op,Broomers,C,A,2,100,40
+Broomers op,Broomers,C,A,3,100,21
+Broomers op,Broomers,C,A,4,95,18
+Broomers op,Broomers,C,A,5,95,12
+New barn ex,NewBarn,E,C,1,35,150
+New barn ex,NewBarn,E,C,2,85,32
+New barn ex,NewBarn,E,C,3,65,10
+New barn ex,NewBarn,E,C,4,80,25
+New barn ex,NewBarn,E,C,5,75,80
+New barn op,NewBarn,C,C,1,95,38
+New barn op,NewBarn,C,C,2,90,49
+New barn op,NewBarn,C,C,3,100,41
+New barn op,NewBarn,C,C,4,95,20
+New barn op,NewBarn,C,C,5,70,50
+Oaklands ex,Oakland,E,A,1,60,7
+Oaklands ex,Oakland,E,A,2,65,6
+Oaklands ex,Oakland,E,A,3,15,4
+Oaklands ex,Oakland,E,A,4,60,50
+Oaklands ex,Oakland,E,A,5,50,80
+Oaklands op,Oakland,C,A,1,90,18
+Oaklands op,Oakland,C,A,2,100,21
+Oaklands op,Oakland,C,A,3,100,42
+Oaklands op,Oakland,C,A,4,100,10
+Oaklands op,Oakland,C,A,5,100,8
+Rainbow ex,Rainbow,E,B,1,40,20
+Rainbow ex,Rainbow,E,B,2,35,22
+Rainbow ex,Rainbow,E,B,3,30,85
+Rainbow ex,Rainbow,E,B,4,40,16
+Rainbow ex,Rainbow,E,B,5,50,30
+Rainbow op,Rainbow,C,B,1,95,33
+Rainbow op,Rainbow,C,B,2,100,34
+Rainbow op,Rainbow,C,B,3,90,29
+Rainbow op,Rainbow,C,B,4,100,34
+Rainbow op,Rainbow,C,B,5,95,40
+Water works ex,WaterWorks,E,C,1,15,76
+Water works ex,WaterWorks,E,C,2,15,62
+Water works ex,WaterWorks,E,C,3,40,55
+Water works ex,WaterWorks,E,C,4,40,52
+Water works ex,WaterWorks,E,C,5,55,105
+Water works op,WaterWorks,C,C,1,75,59
+Water works op,WaterWorks,C,C,2,70,72
+Water works op,WaterWorks,C,C,3,100,31
+Water works op,WaterWorks,C,C,4,80,20
+Water works op,WaterWorks,C,C,5,95,45
+Wildflower ex,Wildflower,E,A,1,90,43
+Wildflower ex,Wildflower,E,A,2,70,30
+Wildflower ex,Wildflower,E,A,3,70,42
+Wildflower ex,Wildflower,E,A,4,95,21
+Wildflower ex,Wildflower,E,A,5,75,19
+Wildflower op,Wildflower,C,A,1,95,10
+Wildflower op,Wildflower,C,A,2,90,12
+Wildflower op,Wildflower,C,A,3,90,11
+Wildflower op,Wildflower,C,A,4,95,7
+Wildflower op,Wildflower,C,A,5,95,10
