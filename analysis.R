@@ -1,6 +1,5 @@
 ##################################################################################
 # Trade-offs between passive and trophic rewilding for biodiversity and ecosystem functioning
-# File prepared by Andrew Tanentzap (ajt65@cam.ac.uk) during lockdown (June 2020, last modified Jan 2023)
 # File contains the following sections:
 # 0) Prepare workspace
 # 1) Tree diversity
