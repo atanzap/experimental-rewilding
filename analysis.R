@@ -603,7 +603,7 @@ veg_NMDS <- metaMDS(raupcrick(hist_veg_comm_plot),k=3)
 # Soil cores taken using dutch auger into dry soils to depth 0.1-0.15m  I.E. SAME AS YOUR STUDENTS
 soil_pH <- lmer(pH ~ Treatment+(1|Site), data=hist_soils)
 
-# only use TOTAL COMBUSTION USING DUMAS MACHINE as problem with OC based on emails with M Heard
+# check total carbon
 soilC_old <- lmer(TC ~ Treatment+(1|Site), data=hist_soils)
 
 # other macronutrients
