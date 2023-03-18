@@ -182,9 +182,9 @@ bugs <- bugs[which(with(bugs,Site=='27acres' & Day=='1')==F),]
 bugs$Carnidae <- bugs$Canacidae + bugs$Carnidae
 bugs <- subset(bugs, select = -Canacidae)
 
-# world spider catalogue now lists the Zoridae (incorrectly called Zodariidae here) under the Miturgidae
-bugs$Miturgidae <- bugs$Miturgidae + bugs$Zodariidae
-bugs <- subset(bugs, select = -Zodariidae)
+# world spider catalogue now lists the Zoridae under the Miturgidae
+bugs$Miturgidae <- bugs$Miturgidae + bugs$Zoridae
+bugs <- subset(bugs, select = -Zoridae)
 
 # create community matrix and calculate diversity
 bugcom <- aggregate(subset(bugs,select=-c(Site,Exclosure,Day,Trap,Trap.biomass)),by=list(bugs$Site,bugs$Exclosure), FUN=sum)
