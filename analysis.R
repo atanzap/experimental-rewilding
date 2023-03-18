@@ -16,7 +16,7 @@
 ## 0) Prepare workspace
 ######################################################################################
 # setwd and loack packages
-setwd(''./data/')
+setwd('./data/')
 library(lme4)
 library(car)
 library(coin)
@@ -600,7 +600,7 @@ veg_NMDS <- metaMDS(raupcrick(hist_veg_comm_plot),k=3)
 
 #################### historical soils
 # Three samples taken per location (either side of exclosure and another)
-# Soil cores taken using dutch auger into dry soils to depth 0.1-0.15m – I.E. SAME AS YOUR STUDENTS
+# Soil cores taken using dutch auger into dry soils to depth 0.1-0.15m Â– I.E. SAME AS YOUR STUDENTS
 soil_pH <- lmer(pH ~ Treatment+(1|Site), data=hist_soils)
 
 # only use TOTAL COMBUSTION USING DUMAS MACHINE as problem with OC based on emails with M Heard
