@@ -96,7 +96,6 @@ height_by_field <- read.csv('knepp_height2.csv')
 treeD <- with(treeC, table(Species,Site,Treatment))
 treeD[rownames(treeD) == 'Blackthorn',,] <- treeD[rownames(treeD) == 'Blackthorn',,] + treeD[rownames(treeD) == 'Blackthorn_patch',,]
 treeD[rownames(treeD) == 'Rose',,] <- treeD[rownames(treeD) == 'Rose',,] + treeD[rownames(treeD) == 'Rose_patch',,]
-#treeD <- treeD[-which(rownames(treeD) %in% c('Blackthorn_patch','Rose_patch','Rose')),,]
 treeD <- treeD[-which(rownames(treeD) %in% c('Blackthorn_patch','Rose_patch')),,]
 treeD <- cbind(rowSums(t(treeD[,,1]) > 0),rowSums(t(treeD[,,2]) > 0))
 
@@ -346,16 +345,12 @@ veg_struc_plot <- as.data.frame(cbind(N_unique_hits,N_hits,Si_D))
 colnames(veg_struc_plot) <- as.vector(sapply(c('N_u_hits','N_hits','Si_D'), function(x){c(paste(x,'_Con',sep=''),paste(x,'_Exc',sep=''))}))
 
 # check normality of variables
-with(veg_struc_plot, shapiro.test(c(N_u_hits_Con,N_u_hits_Exc)))
-with(veg_struc_plot, shapiro.test(log(c(N_u_hits_Con,N_u_hits_Exc))))
 with(veg_struc_plot, shapiro.test(c(N_hits_Con,N_hits_Exc)))
 
 shapiro.test(1/Si_D)
 shapiro.test(log(1/Si_D))
 
-# perform t-tests
-#with(veg_struc_plot, t.test(log(c(N_u_hits_Con,N_u_hits_Exc))~rep(c('C','E'),each=nrow(veg_struc_plot)),paired=T))
-#with(veg_struc_plot, t.test(c(N_hits_Con,N_hits_Exc)~rep(c('C','E'),each=nrow(veg_struc_plot)),paired=T))
+# perform t-test
 with(veg_struc_plot, t.test(log(c(1/Si_D[,1],1/Si_D[,2]))~rep(c('C','E'),each=nrow(Si_D)),paired=T))
 apply(1/Si_D, 2, quantile, c(0.025,0.975))
 colMeans(1/Si_D)
@@ -368,23 +363,8 @@ colMeans(1/Si_D)
 # and converting LOI to %C using standard ratio https://www.tandfonline.com/doi/full/10.1080/00103620500306080
 soilC$kgC_plot <- with(soilC,drymass_g/vol_cm * 10 * 7.2*7.2 * 10000 * LOI/100 * 0.58 / 1000)
 
-# reconvert using UK equation from https://doi.org/10.1007/BF00634106 
-soilC$TC <- (soilC$LOI-3.627)/1.670 
-# and convert to kg / m2 in top 10-cm 
-soilC$kgC_plot2 <- with(soilC,drymass_g/vol_cm * 10 * 7.2*7.2 * 10000 * TC/100 / 1000)
-
-# merge with historical soils
-allsoilC <- rbind(soilC[,c('Site','Treatment','TC')], hist_soils[,c('Site','Treatment','TC')])
-allsoilC$BA <- c(rep('later',nrow(soilC)),rep('before',nrow(hist_soils)))
-allsoilC <- allsoilC[which(allsoilC$Site != 'Oakland'),]
-
-# fit lmer on TC as historically didn't measure BD
-shapiro.test(allsoilC$TC)
-soilC_m1 <- lmer(TC ~ Treatment*BA + (1|Site), data=allsoilC)
-
-# this carries on with modern (i.e. after-treatment) C - pooling samples
+# pool samples
 soilC_perplot <- with(soilC,tapply(kgC_plot,list(Site,Treatment),mean))
-soilC_perplot2 <- with(soilC,tapply(kgC_plot2,list(Site,Treatment),mean))
 shapiro.test(soilC_perplot)
 shapiro.test(log(soilC_perplot))
 t.test(log(soilC_perplot[,1]),log(soilC_perplot[,2]),paired=T)
@@ -415,8 +395,6 @@ treeC[which(treeC$Species %in% c('Oak','Blackthorn','Sallow') & treeC$DBH_cm >= 
 treeC[which(treeC$Species == 'Blackthorn_patch'),'C_kg'] <- 696.7 * with(treeC[which(treeC$Species == 'Blackthorn_patch'),],Ht_m*Width_m*Length_m) * 0.5 /1000
 
 # derive biomass density for rose patches
-# here Georgie subsampled three bushes in much smaller volumes than observed in the field
-# and assume that these relationships hold more generally
 # convert biomass to C at 50%
 rose_allometry <- as.data.frame(cbind(c(0.19125,0.07968,0.091875),c(116.64,76.26,85.07)))
 colnames(rose_allometry) <- c('volume_m3','biomass_g')
